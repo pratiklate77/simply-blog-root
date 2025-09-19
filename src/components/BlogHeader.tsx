@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LogIn, UserPlus } from "lucide-react";
 
 const BlogHeader = () => {
   return (
@@ -17,9 +18,16 @@ const BlogHeader = () => {
           <a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a>
         </nav>
 
-        <Button variant="default" size="sm">
-          Subscribe
-        </Button>
+        <div className="flex items-center space-x-3">
+          <Button variant="ghost" size="sm" className="hidden sm:flex">
+            <LogIn className="w-4 h-4 mr-2" />
+            Login
+          </Button>
+          <Button variant="default" size="sm">
+            <UserPlus className="w-4 h-4 mr-2" />
+            Sign Up
+          </Button>
+        </div>
       </div>
     </header>
   );
